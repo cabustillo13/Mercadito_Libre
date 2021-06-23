@@ -35,16 +35,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav m-auto font-rubik">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#banner-area">Nuevos</a>
+                    <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#special-price">Ofertas</a>
+                    <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#top-sale">Productos Top</a>
+                    <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#blogs">Blog</a>
+                    <a class="nav-link" href="#"></a>
                 </li>
             </ul>
             <form action="#" class="font-size-14 font-rale">
