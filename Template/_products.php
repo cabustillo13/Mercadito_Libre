@@ -16,9 +16,9 @@
                     <div class="col">
                         <?php
                         if (in_array($item['item_id'], $Cart->getCartId($product->getData('cart')) ?? [])){
-                            echo '<button type="submit" disabled class="btn btn-success font-size-16 form-control">In the Cart</button>';
+                            echo '<button type="submit" disabled class="btn btn-success font-size-16 form-control">En el carrito</button>';
                         }else{
-                            echo '<button type="submit" name="top_sale_submit" class="btn btn-warning font-size-16 form-control">Add to Cart</button>';
+                            echo '<button type="submit" name="top_sale_submit" class="btn btn-outline-primary font-size-16 form-control">Agregar al carrito</button>';
                         }
                         ?>
                     </div>
