@@ -20,7 +20,7 @@ $in_cart = $Cart->getCartId($product->getData('cart'));
     <div class="container">
         <h4 class="font-rubik font-size-20">Ofertas por tiempo limitado</h4>
         <div id="filters" class="button-group text-right font-baloo font-size-16">
-            <button class="btn is-checked" data-filter="*">All Brand</button>
+            <button class="btn is-checked" data-filter="*">Todos</button>
             <?php
                 array_map(function ($brand){
                     printf('<button class="btn" data-filter=".%s">%s</button>', $brand, $brand);
@@ -33,7 +33,7 @@ $in_cart = $Cart->getCartId($product->getData('cart'));
             <div class="grid-item border <?php echo $item['item_brand'] ?? "Brand" ; ?>">
                 <div class="item py-2" style="width: 200px;">
                     <div class="product font-rale">
-                        <a href="<?php printf('%s?item_id=%s', 'product.php',  $item['item_id']); ?>"><img src="<?php echo $item['item_image'] ?? "./assets/products/13.png"; ?>" alt="product1" class="img-fluid"></a>
+                        <a href="<?php printf('%s?item_id=%s', 'product.php',  $item['item_id']); ?>"><img src="<?php echo $item['item_image'] ?? "./assets/products/v13.png"; ?>" alt="product1" class="img-fluid"></a>
                         <div class="text-center">
                             <h6><?php echo $item['item_name'] ?? "Unknown"; ?></h6>
                             <div class="rating text-warning font-size-12">
