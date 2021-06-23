@@ -10,15 +10,38 @@
                 <p class="font-size-14 font-rale text-white-50">Destinado a los pequeños y medianos comerciantes que trabajan por una mejor Argentina.</p>
             </div>
             <div class="col-lg-4 col-12">
-                <h4 class="font-rubik font-size-20">Newslatter</h4>
-                <form class="form-row">
+                <h4 class="font-rubik font-size-20">Recibir catálogo mensual</h4>
+                <form class="form-row" action="" method="post">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Email *">
+                        <input type="text" class="form-control" placeholder="Tu mail" value="" name="username" />
                     </div>
                     <div class="col">
-                        <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+                        <button type="submit" class="btn btn-primary mb-2" name="submit" value="Submit" />Suscríbete</button>  
                     </div>
                 </form>
+
+                <!--Guardar mail para newsletter-->
+                <?php
+                    if (isset($_POST['submit'])) { 
+                        $email= $_POST['username'];
+
+                        # Evaluar si el mail se escribió correctamente
+                        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                            echo($email." registrado con éxito");
+                        }
+                        else{
+                            echo("$email NO es válido");
+                        }    
+                    }
+                ?>
+
+                <!--Evitar que aparezca cartel de reenviar Form cada vez que se recarga la página-->
+                <script>
+                    if ( window.history.replaceState ) {
+                        window.history.replaceState( null, null, window.location.href );
+                    }
+                </script>
+
             </div>
             <div class="col-lg-2 col-12">
                 <h4 class="font-rubik font-size-20">¡Contáctame!</h4>
