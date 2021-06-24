@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 20, 2020 at 11:01 AM
--- Server version: 10.4.10-MariaDB
--- PHP Version: 7.1.33
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 24-06-2021 a las 09:45:50
+-- Versión del servidor: 10.4.19-MariaDB
+-- Versión de PHP: 7.4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `shopee`
+-- Base de datos: `shopee`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cart`
+-- Estructura de tabla para la tabla `cart`
 --
 
 CREATE TABLE `cart` (
@@ -34,10 +33,23 @@ CREATE TABLE `cart` (
   `item_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `cart`
+--
+
+INSERT INTO `cart` (`cart_id`, `user_id`, `item_id`) VALUES
+(43, 1, 7),
+(44, 1, 4),
+(45, 1, 3),
+(47, 1, 5),
+(48, 1, 10),
+(49, 1, 11),
+(50, 1, 6);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `product`
+-- Estructura de tabla para la tabla `product`
 --
 
 CREATE TABLE `product` (
@@ -50,49 +62,47 @@ CREATE TABLE `product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `product`
+-- Volcado de datos para la tabla `product`
 --
 
 INSERT INTO `product` (`item_id`, `item_brand`, `item_name`, `item_price`, `item_image`, `item_register`) VALUES
-(1, 'Samsung', 'Samsung Galaxy 10', 152.00, './assets/products/1.png', '2020-03-28 11:08:57'), -- NOW()
-(2, 'Redmi', 'Redmi Note 7', 122.00, './assets/products/2.png', '2020-03-28 11:08:57'),
-(3, 'Redmi', 'Redmi Note 6', 122.00, './assets/products/3.png', '2020-03-28 11:08:57'),
-(4, 'Redmi', 'Redmi Note 5', 122.00, './assets/products/4.png', '2020-03-28 11:08:57'),
-(5, 'Redmi', 'Redmi Note 4', 122.00, './assets/products/5.png', '2020-03-28 11:08:57'),
-(6, 'Redmi', 'Redmi Note 8', 122.00, './assets/products/6.png', '2020-03-28 11:08:57'),
-(7, 'Redmi', 'Redmi Note 9', 122.00, './assets/products/8.png', '2020-03-28 11:08:57'),
-(8, 'Redmi', 'Redmi Note', 122.00, './assets/products/10.png', '2020-03-28 11:08:57'),
-(9, 'Samsung', 'Samsung Galaxy S6', 152.00, './assets/products/11.png', '2020-03-28 11:08:57'),
-(10, 'Samsung', 'Samsung Galaxy S7', 152.00, './assets/products/12.png', '2020-03-28 11:08:57'),
-(11, 'Apple', 'Apple iPhone 5', 152.00, './assets/products/13.png', '2020-03-28 11:08:57'),
-(12, 'Apple', 'Apple iPhone 6', 152.00, './assets/products/14.png', '2020-03-28 11:08:57'),
-(13, 'Apple', 'Apple iPhone 7', 152.00, './assets/products/15.png', '2020-03-28 11:08:57');
+(1, 'Santa_Julia', 'Santa Julia Magna', 577.00, './assets/products/v1.jpg', '2021-06-23 11:08:57'),
+(2, 'Toro', 'Toro Bivarietales', 423.00, './assets/products/v2.png', '2021-06-23 05:03:57'),
+(3, 'Toro', 'Toro Clásico Tinto', 360.00, './assets/products/v3.png', '2021-06-23 05:06:57'),
+(4, 'Toro', 'Toro Clásico Rosado', 385.00, './assets/products/v4.png', '2021-06-23 05:07:57'),
+(5, 'Toro', 'Toro Clásico Blanco', 370.00, './assets/products/v5.png', '2021-06-23 05:19:57'),
+(6, 'Toro', 'Toro Centenario Malbec', 392.00, './assets/products/v6.png', '2021-06-23 05:23:57'),
+(7, 'Toro', 'Toro Chardonnay', 405.00, './assets/products/v8.png', '2021-06-23 05:25:57'),
+(8, 'Toro', 'Toro Red Blend', 459.00, './assets/products/v10.png', '2021-06-23 05:27:57'),
+(9, 'Santa_Julia', 'Santa Julia Reserva', 679.00, './assets/products/v11.jpg', '2020-03-28 11:08:57'),
+(10, 'Santa_Julia', 'Santa Julia Tintillo', 607.00, './assets/products/v12.png', '2021-06-23 04:59:57'),
+(11, 'Norton', 'Norton Gernot', 789.00, './assets/products/v13.png', '2021-06-23 05:35:57'),
+(12, 'Norton', 'Norton Chardonnay', 925.00, './assets/products/v14.png', '2021-06-23 05:37:57'),
+(13, 'Norton', 'Norton Gruner', 978.00, './assets/products/v15.png', '2021-06-23 05:39:57');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Estructura de tabla para la tabla `suscriptores`
 --
 
-CREATE TABLE `user` (
-  `user_id` int(11) NOT NULL,
-  `first_name` varchar(100) NOT NULL,
-  `last_name` varchar(100) NOT NULL,
-  `register_date` datetime DEFAULT NULL
+CREATE TABLE `suscriptores` (
+  `email` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `user`
+-- Volcado de datos para la tabla `suscriptores`
 --
 
-INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `register_date`) VALUES
-(1, 'Daily', 'Tuition', '2020-03-28 13:07:17'),
-(2, 'Akshay', 'Kashyap', '2020-03-28 13:07:17');
+INSERT INTO `suscriptores` (`email`) VALUES
+('cabustillo13@hotmail.com'),
+('cabustillo99@gmail.com'),
+('prueba@gmail.com');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wishlist`
+-- Estructura de tabla para la tabla `wishlist`
 --
 
 CREATE TABLE `wishlist` (
@@ -102,48 +112,44 @@ CREATE TABLE `wishlist` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Indexes for dumped tables
+-- Volcado de datos para la tabla `wishlist`
+--
+
+INSERT INTO `wishlist` (`cart_id`, `user_id`, `item_id`) VALUES
+(46, 1, 1),
+(42, 1, 12);
+
+--
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `cart`
+-- Indices de la tabla `cart`
 --
 ALTER TABLE `cart`
   ADD PRIMARY KEY (`cart_id`);
 
 --
--- Indexes for table `product`
+-- Indices de la tabla `product`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`item_id`);
 
 --
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`user_id`);
-
---
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `cart`
+-- AUTO_INCREMENT de la tabla `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
--- AUTO_INCREMENT for table `product`
+-- AUTO_INCREMENT de la tabla `product`
 --
 ALTER TABLE `product`
   MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
