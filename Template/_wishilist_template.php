@@ -40,7 +40,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                                         <span><i class="fas fa-star"></i></span>
                                         <span><i class="far fa-star"></i></span>
                                     </div>
-                                    <a href="#" class="px-2 font-rale font-size-14">20,534 ratings</a>
                                 </div>
                                 <!--  !product rating-->
 
@@ -54,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
                                     <form method="post">
                                         <input type="hidden" value="<?php echo $item['item_id'] ?? 0; ?>" name="item_id">
-                                        <button type="submit" name="cart-submit" class="btn font-baloo text-danger">Agregar al Carrito</button>
+                                        <button type="submit" name="cart-submit" class="btn font-baloo text-primary">Agregar al Carrito</button>
                                     </form>
 
 
@@ -64,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                             </div>
 
                             <div class="col-sm-2 text-right">
-                                <div class="font-size-20 text-danger font-baloo">
+                                <div class="font-size-20 text-primary font-baloo font-weight-bold">
                                     $<span class="product_price" data-id="<?php echo $item['item_id'] ?? '0'; ?>"><?php echo $item['item_price'] ?? 0; ?></span>
                                 </div>
                             </div>
