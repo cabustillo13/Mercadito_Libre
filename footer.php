@@ -38,7 +38,7 @@
                             }
                             
                             # Evaluar si el email es nuevo o ya se había registrado
-                            $verify = "SELECT `email` FROM `newsletter` WHERE `email`='$email'";
+                            $verify = "SELECT `email` FROM `suscriptores` WHERE `email`='$email'";
                             $result = $con->query($verify);
                             if ($result->num_rows > 0) {
                                 # Este mail ya fue registrado previamente
@@ -46,7 +46,7 @@
                             }
                             else {
                                 # Nuevo mail
-                                $sql = "INSERT INTO `newsletter` VALUES ('$email')";
+                                $sql = "INSERT INTO `suscriptores` VALUES ('$email')";
 
                                 # Revisar query
                                 if ($con->query($sql) === TRUE) {
