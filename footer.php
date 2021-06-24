@@ -36,17 +36,26 @@
                                 echo "Failed to connect to MySQL: " . mysqli_connect_error();
                                 exit();
                             }
+                            
+                            # Evaluar si el email es nuevo o ya se había registrado
+                            $verify = "SELECT `email` FROM `newsletter` WHERE `email`='$email'";
+                            $result = $con->query($verify);
+                            if ($result->num_rows > 0) {
+                                # Este mail ya fue registrado previamente
+                                echo 'Este mail ya fue registrado antes.';
+                            }
+                            else {
+                                # Nuevo mail
+                                $sql = "INSERT INTO `newsletter` VALUES ('$email')";
 
-                            $sql = "INSERT INTO `newsletter` VALUES ('$email')";
-
-                            # Revisar query
-                            if ($con->query($sql) === TRUE) {
-                                echo($email." registrado con éxito");     
-                              }else {
-                                echo "ERROR de conexión";
-                              }
-                              mysqli_close($con);
-
+                                # Revisar query
+                                if ($con->query($sql) === TRUE) {
+                                    echo($email." registrado con éxito.");     
+                                }else {
+                                    echo "ERROR de conexión";
+                                }
+                                mysqli_close($con);
+                            }
                         }
                         else{
                             echo("$email NO es válido");
