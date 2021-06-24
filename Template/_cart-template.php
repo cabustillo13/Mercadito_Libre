@@ -12,7 +12,6 @@
     }
 ?>
 
-
 <section id="cart" class="py-3 mb-5">
     <div class="container-fluid w-75">
         <h5 class="font-baloo font-size-20">Carrito de compras</h5>
@@ -88,7 +87,9 @@
                     <h6 class="font-size-12 font-rale text-success py-3"><i class="fas fa-check"></i> Aprovecha el envio GRATUITO.</h6>
                     <div class="border-top py-4">
                         <h5 class="font-baloo font-size-20">Subtotal ( <?php echo isset($subTotal) ? count($subTotal) : 0; ?> item):&nbsp; <span class="text-primary font-weight-bold">$<span class="text-primary font-weight-bold" id="deal-price"><?php echo isset($subTotal) ? $Cart->getSum($subTotal) : 0; ?></span> </span> </h5>
-                        <button type="submit" class="btn btn-success mt-3">COMPRAR</button>
+                        <form action="formulario.php" >
+                            <button type="submit" class="btn btn-success mt-3">COMPRAR</button>
+                        </form>
                     </div>
                 </div>
             </div>

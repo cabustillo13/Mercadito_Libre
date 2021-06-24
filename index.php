@@ -28,7 +28,7 @@
     /*  include new phones section  */
 
     /*  include blog area  */
-         include ('Template/_blogs.php');
+        include ('Template/_blogs.php');
     /*  include blog area  */
 
 ?>
