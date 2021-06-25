@@ -6,9 +6,9 @@
 ?>
 
 <?php
-//session_start();
-include ('_header.php');
-include ("_helper.php");
+    //session_start();
+    include ('_header.php');
+    include ("_helper.php");
 ?>
 
 <?php
@@ -29,11 +29,11 @@ include ("_helper.php");
     <div class="row m-0">
         <div class="col-lg-4 offset-lg-2">
             <div class="text-center pb-5">
-                <h1 class="login-title text-dark">Login</h1>
+                <h1 class="login-title text-dark">Ingresa a tu cuenta para comprar</h1>
                 <span class="font-ubuntu text-black-50">Crear una <a href="_register.php">Nueva Cuenta</a></span>
             </div>
             <div class="d-flex justify-content-center">
-                <form action="_login.php" method="post" enctype="multipart/form-data" id="log-form">
+                <form method="post" enctype="multipart/form-data" id="log-form">
 
                     <div class="form-row my-4">
                         <div class="col">

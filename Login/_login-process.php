@@ -4,12 +4,12 @@ $error = array();
 
 $email = validate_input_email($_POST['email']);
 if (empty($email)){
-    $error[] = "You forgot to enter your Email";
+    $error[] = "Olvidaste ingresar tu mail";
 }
 
 $password = validate_input_text($_POST['password']);
 if (empty($password)){
-    $error[] = "You forgot to enter your password";
+    $error[] = "Olvidaste ingresar tu contraseña";
 }
 
 if(empty($error)){
@@ -30,13 +30,13 @@ if(empty($error)){
     if (!empty($row)){
         // verify password
         if(password_verify($password, $row['password'])){
-            header("location: index.php");
+            header("location: _factura.php");
             exit();
         }
     }else{
-        print "You are not a member please register!";
+        print "  Debes crear una nueva cuenta primero para realizar una compra.";
     }
 
 }else{
-    echo "Please Fill out email and password to login!";
+    echo "Debes colocar tu email y contraseña correctamente";
 }

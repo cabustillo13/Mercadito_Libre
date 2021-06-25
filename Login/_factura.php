@@ -36,7 +36,7 @@ if(isset($_SESSION['userID'])){
                 <div class="user-info px-3">
                     <ul class="font-ubuntu navbar-nav">
                         <li class="nav-link"><b>Nombre: </b><span><?php echo isset($user['firstName']) ? $user['firstName'] : ''; ?></span></li>
-                        <li class="nav-link"><b>Apellido: </b><span><?php echo isset($user['lastName']) ? $user['lastName'] : ''; ?></span></li>
+                        <li class="nav-link"><b>Dirección: </b><span><?php echo isset($user['lastName']) ? $user['lastName'] : ''; ?></span></li>
                         <li class="nav-link"><b>Email: </b><span><?php echo isset($user['email']) ? $user['email'] : ''; ?></span></li>
                     </ul>
                 </div>

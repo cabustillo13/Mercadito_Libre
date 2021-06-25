@@ -46,7 +46,8 @@ $in_cart = $Cart->getCartId($product->getData('cart'));
                             <div class="price py-2">
                                 <span>$<?php echo $item['item_price'] ?? 0 ?></span>
                             </div>
-                            <form method="post">
+                            <!--Le agregue action para que vuelva a la posición en la que estaba después del refresh-->
+                            <form method="post" action="#special-price">
                                 <input type="hidden" name="item_id" value="<?php echo $item['item_id'] ?? '1'; ?>">
                                 <input type="hidden" name="user_id" value="<?php echo 1; ?>">
                                 <?php

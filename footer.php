@@ -11,7 +11,7 @@
             </div>
             <div class="col-lg-4 col-12">
                 <h4 class="font-rubik font-size-20">Recibir catálogo mensual</h4>
-                <form class="form-row" action="" method="post">
+                <form class="form-row" action="#footer" method="post">
                     <div class="col">
                         <input type="text" class="form-control" placeholder="Tu mail" value="" name="username" />
                     </div>
